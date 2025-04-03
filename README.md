@@ -18,6 +18,7 @@
 | 2025-04-03 | 시스템 설계 및 프로토타입 개발 | 이찬혁, 천현종 |
 | 2025-04-04 | 테스트 및 수정          | 전원        |
 | 2025-04-05 | 최종 발표 준비           | 전원        |
+https://docs.google.com/spreadsheets/d/1g8Bj6AzbU8L6eN1DjOagc9D81YcRr1n8/edit?usp=sharing&ouid=102926598144344667539&rtpof=true&sd=true
 
 ---
 

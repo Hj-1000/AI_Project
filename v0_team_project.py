@@ -3,28 +3,57 @@ from ultralytics import solutions
 from ultralytics import YOLO
 import threading
 
-cap = cv2.VideoCapture("v6_advanced_yolo/persons.mp4")
 
-model1 = 'yolo11n.pt'
-model2 = 'yolo11n.pt'
+
+video_region = "v6_advanced_yolo/persons.mp4"
+video_heatmap = "v6_advanced_yolo/persons.mp4"
+
+
+
+
+
+
 # 레기온 좌표 설정
 region_points = {
-    "region-01  " : [(109, 84), (111, 355), (453, 95), (448, 360)]
+    "region-01  " : [(109, 84), (453, 95),(448, 360),(111, 355)]
 }
-# 레기온 객체(구역 설정)
+
+# 히트 맵 객체(불법 주정차)
+heatmap = solutions.Heatmap(
+    model = "yolo11n.pt",
+     show= True,
+     colormap = cv2.COLORMAP_PLASMA,
+     classes = 0,
+     conf = 0.6,
+)
+
+# 레기온 객체(횡단 보도 침범)
 region = solutions.RegionCounter(
-    model = model1,
+    model = "yolo11n.pt",
     region = region_points,
     show = True
 ) 
-# 히트 맵 객체
-heatmap = solutions.Heatmap(
-    model = model2,
-    # show= True,
-    # colormap = cv2.COLORMAP_PLASMA,
-    # classes = 0,
-    # conf = 0.6,
-)
+
+# 히트맵 함수
+def run_heatmap(filename):
+    cap = cv2.VideoCapture(filename)
+    while cap.isOpened():
+        success, frame = cap.read()
+        if not success:
+            print("비디오 프레임 확인")
+            break
+        # 영상 출력 사이즈
+        frame_resized = cv2.resize(frame,(640,480))
+        cv2.namedWindow("HeatMap Test", cv2.WINDOW_NORMAL)
+        heat_frame = heatmap(frame_resized)
+        print("HeatMap", heat_frame)
+        cv2.waitKey(1)
+        
+    cap.release()
+    cv2.destroyAllWindows()     
+
+
+
 
 # 레기온 함수ㅡ
 def run_region(filename):
@@ -54,27 +83,11 @@ def run_region(filename):
     cap.release()
     cv2.destroyAllWindows()
 
-# 히트맵 함수
-def run_heatmap(filename):
-    cap = cv2.VideoCapture(filename)
-    while cap.isOpened():
-        success, frame = cap.read()
-        if not success:
-            print("비디오 프레임 확인")
-            break
-        # 영상 출력 사이즈
-        frame_resized = cv2.resize(frame,(640,360))
-        cv2.namedWindow("HeatMap Test", cv2.WINDOW_NORMAL)
-        heat_frame = heatmap(frame_resized)
-        print("HeatMap", heat_frame)
-        cv2.waitKey(1)
-        
-    cap.release()
-    cv2.destroyAllWindows()     
+
 #print(f"succes",{run_heatmap})
 # 멀티 스레드 실행
-thread_region = threading.Thread(target=run_region, args=(cap,), daemon=True)
-thread_heatmap = threading.Thread(target=run_heatmap, args=(cap,), daemon=True)
+thread_region = threading.Thread(target=run_region, args=(video_region,), daemon=True)
+thread_heatmap = threading.Thread(target=run_heatmap, args=(video_heatmap,), daemon=True)
 
 #스레드 시작
 thread_region.start()
@@ -83,7 +96,6 @@ thread_heatmap.start()
 #스레드 종료
 thread_region.join()
 thread_heatmap.join()
-            
 
 
 

@@ -24,4 +24,5 @@
 
 ### 📂 PPT 자료
 
+#### https://docs.google.com/presentation/d/1zXHc0QqChxUPiohZWj9pI6RlYiUaazwcKsHpnaUn7MQ/edit?slide=id.p21#slide=id.p21
 

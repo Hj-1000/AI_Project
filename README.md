@@ -19,12 +19,13 @@
 
 ---
 
-## 📁 폴더 구조
+## 📁 폴더 구조(예시)
 
 crosswalk-safety-system/ ├── data/ ├── models/ ├── src/ │ ├── detection.py │ ├── utils.py │ └── main.py ├── static/ ├── templates/ ├── requirements.txt └── README.md
+
 ---
 
-## ⚙️ 설치 및 실행 방법
+## ⚙️ 설치 및 실행 방법(예시)
 ```bash
 python -m venv venv
 source venv/bin/activate
@@ -61,9 +62,6 @@ pip install -r requirements.txt
 
 ### 3. 프로젝트 실행
 python src/main.py
-
-
-
 
 #### https://docs.google.com/spreadsheets/d/1g8Bj6AzbU8L6eN1DjOagc9D81YcRr1n8/edit?usp=sharing&ouid=102926598144344667539&rtpof=true&sd=true
 ---

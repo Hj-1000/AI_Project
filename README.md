@@ -13,7 +13,7 @@
 
 ## 🔧 사용 기술  
 - **언어**: Python 3.10  
-- **프레임워크**: Flask (웹 서비스용), OpenCV, TensorFlow / PyTorch  
+- **프레임워크**: Flask (웹 서비스용), OpenCV
 - **모델**: YOLOv8 (객체 탐지)  
 - **기타 라이브러리**: numpy, matplotlib 등
 

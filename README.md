@@ -48,6 +48,7 @@ python src/main.py
 | 테스트 및 수정          | 전원        |
 | 최종 발표 준비           | 전원        |
 
+📂 타임테이블 링크
 #### https://docs.google.com/spreadsheets/d/1g8Bj6AzbU8L6eN1DjOagc9D81YcRr1n8/edit?usp=sharing&ouid=102926598144344667539&rtpof=true&sd=true
 ---
 

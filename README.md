@@ -48,6 +48,7 @@ python src/main.py
 | 테스트 및 수정          | 전원        |
 | 최종 발표 준비           | 전원        |
 
+## https://docs.google.com/spreadsheets/d/1g8Bj6AzbU8L6eN1DjOagc9D81YcRr1n8/edit?usp=sharing&ouid=102926598144344667539&rtpof=true&sd=true
 ---
 
 ## 설치 프로세스
@@ -62,7 +63,6 @@ pip install -r requirements.txt
 ### 3. 프로젝트 실행
 python src/main.py
 
-#### https://docs.google.com/spreadsheets/d/1g8Bj6AzbU8L6eN1DjOagc9D81YcRr1n8/edit?usp=sharing&ouid=102926598144344667539&rtpof=true&sd=true
 ---
 
 ### 📂 PPT 자료

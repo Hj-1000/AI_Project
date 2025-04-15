@@ -46,11 +46,10 @@ python src/main.py
 | CCTV 데이터 수집 및 분석      | 김도현      |
 | 시스템 설계 및 프로토타입 개발 | 정찬혁, 천현종 |
 | PPT 제작 | 천현종 |
-| 테스트 및 수정          | 전원        |
-| 최종 발표 준비           | 전원        |
 
 ### 📂 타임테이블 링크
 #### https://docs.google.com/spreadsheets/d/1g8Bj6AzbU8L6eN1DjOagc9D81YcRr1n8/edit?usp=sharing&ouid=102926598144344667539&rtpof=true&sd=true
+
 ---
 
 ## 설치 프로세스

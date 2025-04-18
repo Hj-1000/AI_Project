@@ -68,5 +68,5 @@ python src/main.py
 
 ### 📂 PPT 자료
 
-#### [https://docs.google.com/presentation/d/1zXHc0QqChxUPiohZWj9pI6RlYiUaazwcKsHpnaUn7MQ/edit?slide=id.p21#slide=id.p21](https://docs.google.com/presentation/d/1jQVhKUUMxHbgz3D7m0OTqC2T9DI-EmrbhHjaplSZ49Y/edit?usp=sharing)
+#### [https://docs.google.com/presentation/d/1RlA_aR_lyl4vheT1HIVBDSBNIkVB-rbmsBuDJ2dHsFY/edit?slide=id.p34#slide=id.p34]
 
